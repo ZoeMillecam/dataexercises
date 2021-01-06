@@ -1,0 +1,6 @@
+mkdir dataexercises
+git init
+make new respo on github and copy the link
+git clone url exercises 
+cd exercises
+
