@@ -1,0 +1,21 @@
+normalise to BCNF
+
+staffNo and dentistname 
+patienNo and patientName 
+
+UNF:
+db(staffNo, dentistName, patientNo, patientName, appointment, surgeryNo)
+
+1NF: all data present
+db(*staffNo*, denstistName, patientNo, patientName,*appDate*,*appTime*, surgeryNo)
+
+2NF: 
+dentist(*staffNo*, dentistName))
+db(*staffNo*, patientNo, patientName,*appDate*,*appTime*, surgeryNo)
+
+3NF:
+patientname is nly dependent on patienNo -> transative dependency -> violation of 3NF rules 
+dentist(*staffNo*, dentistName)
+patient(*patientNo*,patientName)
+appointment(*staffNo*, patientNo, ,*appDate*,*appTime*, surgeryNo)
+
