@@ -1,0 +1,16 @@
+UNF:
+db: paNo, paName, waNo, waName, bedNo,[grugNo, drugName, description, dosage, MOA, un/d, start, finish]
+
+1NF
+db: *paNo*, paName, waNo, waName, bedNo,*drugNo*, drugName, description, dosage, MOA, un/d, *start*, finish
+
+2NF:
+patient: *paNo*, paName, waNo, waName, bedNo
+drug: *drugNo*, drugName, description, dosage, MOA
+db: *paNo*, *drugNo*, un/d, *start*, finish
+
+3NF:
+patient: *paNo*, paName, waNo, bedNo
+ward: *waNo*, waName
+drug: *drugNo*, drugName, description, dosage, MOA
+db: *paNo*, *drugNo*, un/d, *start*, finish
